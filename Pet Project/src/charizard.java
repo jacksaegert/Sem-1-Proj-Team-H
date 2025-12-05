@@ -1,66 +1,34 @@
-public class Charizard {
-@SuppressWarnings("FieldMayBeFinal")
-private  int health;
-@SuppressWarnings("FieldMayBeFinal")
-private  int energy;
-@SuppressWarnings("FieldMayBeFinal")
-private  int level;
-@SuppressWarnings("FieldMayBeFinal")
-private  int temperature;
-@SuppressWarnings("FieldMayBeFinal")
-public int mood;
+public class charizard{
 
-    public Charizard(int Health, int Energy, int Level, int Temperature, int Mood) {
-     
-        this.health=Health;
-     
-        this.energy = Energy;
-     
-        this.level = Level;
-  
-        this.temperature = Temperature;
+    @SuppressWarnings("FieldMayBeFinal")
+    private int Health;
+    @SuppressWarnings("FieldMayBeFinal")
+    private int Energy;
+    @SuppressWarnings("FieldMayBeFinal")
+    private int Level;
+    @SuppressWarnings("FieldMayBeFinal")
+    private int Temperature;
 
-        this.mood=Mood;
-}
+    public charizard(int Health, int Energy, int Level, int Temperature) {
+        this.Health = Health;
+        this.Energy = Energy;
+        this.Level = Level;
+        this.Temperature = Temperature;
+    }
 
+    public int getHealth() {
+        return Health;
+    }
 
+    public int getEnergy() {
+        return Energy;
+    }
 
-public int getHealth() {
+    public int getLevel() {
+        return Level;
+    }
 
-    return health;
-
-}
-
-
-
-public int getEnergy() {
-
-    return energy;
-
-}
-
-
-
-public int getLevel() {
-
-    return level;
-
-}
-
-
-
-public double getTemperature() {
-
-    return temperature;
-
-}
-
-  
-public int getMood() {
-
-    return mood;
-
-}
-    
-
+    public int getTemperature() {
+        return Temperature;
+    }
 }
