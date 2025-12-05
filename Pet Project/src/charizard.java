@@ -1,14 +1,26 @@
 public class Charizard {
+@SuppressWarnings("FieldMayBeFinal")
 private  int health;
+@SuppressWarnings("FieldMayBeFinal")
 private  int energy;
+@SuppressWarnings("FieldMayBeFinal")
 private  int level;
+@SuppressWarnings("FieldMayBeFinal")
 private  int temperature;
+@SuppressWarnings("FieldMayBeFinal")
+public int mood;
 
-    public Charizard() {
-        this.energy = 100;
-        this.health = 100;
-        this.level = 1;
-        this.temperature = 36;
+    public Charizard(int Health, int Energy, int Level, int Temperature, int Mood) {
+     
+        this.health=Health;
+     
+        this.energy = Energy;
+     
+        this.level = Level;
+  
+        this.temperature = Temperature;
+
+        this.mood=Mood;
 }
 
 
@@ -43,6 +55,12 @@ public double getTemperature() {
 
 }
 
+  
+public int getMood() {
+
+    return mood;
+
+}
     
 
 }

@@ -4,7 +4,7 @@ public class App {
 
 
         System.out.println("Hello, World!");
-        Charizard charizard = new Charizard();
+        Charizard charizard = new Charizard(100,100,1,38);
         System.out.println("Charizard created with health: " + charizard.getHealth() + ", energy: " + charizard.getEnergy() + ", level: " + charizard.getLevel() + ", temperature: " + charizard.getTemperature() + "°C");
 
     
