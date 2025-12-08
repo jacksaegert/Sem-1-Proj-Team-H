@@ -1,10 +1,10 @@
 public class ninetails implements Pokemon{
     private String name;
     private int level;
-    double xp;
-    int energy;
-    int health;
-    int mood;
+    double xp = 0;
+    int energy = 0;
+    int health = 0;
+    int mood = 0;
     public ninetails(n)
     {
         mood = 50;
