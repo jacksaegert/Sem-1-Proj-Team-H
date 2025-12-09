@@ -106,5 +106,79 @@ this.temperature-=random.nextInt(0,3);
         this.temperature+=random.nextInt(5,15);
         this.mood+=10;
     }
- 
+    public void displaystats() {
+        System.out.println("Charizard's Stats:" +"Health: " + this.health + ", Energy: " + this.energy + ", Level: " + this.level + ", Temperature: " + this.temperature + "°C" + ", Mood: " + this.mood + ", Experience: " + this.xp);
+     
+    }
+    public void checkTemperature() {
+        if(this.temperature>100){
+            this.temperature=100;
+        if (this.temperature < 20) {
+            System.out.println("Charizard is too cold! Temperature: " + this.temperature + "°C "+"please raise immediately");
+        }
+        else if(this.temperature< 35){
+            System.out.println("Charizard's temperature is normal and has gained a mood boost. Temperature: " + this.temperature + "°C ");
+            this.mood+=5;
+        }
+        else if (this.temperature >= 15) {
+            System.out.println("Charizard has become too cold and passed out! Temperature: " + this.temperature + "°C "+"next time check their temperature more often and keep it above 15°C");
+            this.health-=100; 
+        }
+        if(this.temperature>100){
+            this.temperature=100;
+        }
+    }
+}
+        public void checkHealth() {
+            if(this.health>100){
+                this.health=100;
+            if (this.health <= 0) {
+                System.out.println("Charizard has fainted! Health: " + this.health + " maintain their vitals effectively to prevent this in the future.");
+                System.exit(1);
+            }
+            
+            }
+        }
+    
+    
+    public void checkMood() {
+        if(this.mood>100){
+            this.mood=100;
+        
+        if (this.mood < 25) {
+            System.out.println("Charizard is feeling very sad! Mood: " + this.mood + " please play with them to cheer them up.");
+        }
+        if (this.mood >= 80) {
+            System.out.println("Charizard is feeling very happy! Mood: " + this.mood + " keep up the good work!");
+            this.health+=5;
+            this.energy+=10;
+        }
+        if (this.mood <= 0) {
+            System.out.println("Charizard is extremely depressed and has lost the will to live! Mood: " + this.mood + " please take better care of their emotional well-being.");
+            this.health-=100;
+        }
+    }
+      
+    }
+    public void checkEnergy() {
+        if(this.energy>100){
+            this.energy=100;
+        if (this.energy < 20) {
+            System.out.println("Charizard is extremely tired! Energy: " + this.energy + " please let them rest.");
+        }
+        if (this.energy > 80) {
+            System.out.println("Charizard is full of energy! Energy: " + this.energy + " great job keeping them active!");
+            this.mood+=5;
+        }
+        if (this.energy <= 0) {
+            System.out.println("Charizard has collapsed from exhaustion! Energy: " + this.energy + " please manage their energy levels better.");
+            this.health-=100;
+        }
+        if(this.energy==100){
+            System.out.println("Charizard's energy is at maximum capacity! Energy: " + this.energy + " and has gained a health boost.");
+            this.health+=5;
+        }
+       
+        }
+    }
 }

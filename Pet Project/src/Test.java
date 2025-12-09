@@ -23,5 +23,11 @@ public class Test {
         charizard.fire();
         System.out.println("After using fire, Charizard has health: " + charizard.getHealth() + ", energy: " + charizard.getEnergy() + ", level: " + charizard.getLevel() + ", temperature: " + charizard.getTemperature() + "°C" + ", experience: " + charizard.getXp());
     
+    charizard.checkEnergy();
+    charizard.checkHealth();
+    charizard.checkTemperature();
+    charizard.checkMood();
+    charizard.displaystats();
+    
 }
 }
