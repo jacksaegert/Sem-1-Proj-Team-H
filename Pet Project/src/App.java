@@ -16,13 +16,13 @@ public class App {
         //Selector
         if (choice == 1){
             charizard pokemon = new charizard();
-        } else if (choice == 2) {
-            bellsprout pokemon = new bellsprout();
-        } else if (choice == 3) {
-            ninetails pokemon = new ninetails();
-        } else {
-            ditto pokemon = new ditto();
-        }
+        } //else if (choice == 2) {
+            //bellsprout pokemon = new bellsprout();
+      //  } //else if (choice == 3) {
+          //  ninetails pokemon = new ninetails();
+       // } //else {
+          //  Ditto pokemon = new Ditto();
+      //  }
         int rand = 0;
         //Event loop WHILE pokemon is alive
         while (Pokemon.getHealth() > 0 && Pokemon.getEnergy() > 0 && Pokemon.getMood() > 0){

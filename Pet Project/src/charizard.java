@@ -1,8 +1,9 @@
 import java.util.Random;
 public class charizard implements  Pokemon {
+    //initialize random
     Random random = new Random();
 
-  
+  //initializes the stats
      private int health;
 
    private int energy;
@@ -14,7 +15,7 @@ public class charizard implements  Pokemon {
    private int mood;
    @SuppressWarnings("FieldMayBeFinal")
    private double xp;
-
+//create constructor
     public charizard() {
         this.health = 100;
         this.energy = 100;
@@ -23,7 +24,7 @@ public class charizard implements  Pokemon {
         this.mood=100;
          this.xp = 0;
     }
-    
+    //getter methods for the variable
     public double getXp() {
         return xp;
     }
@@ -47,13 +48,17 @@ public class charizard implements  Pokemon {
     public int getMood(){
         return mood;
     }
+
+    //behavior methods
+
+    //the method sleep, increases energy and health, and decreases temperature slightly
     @Override
     public void sleep() {
         this.energy+=25;
       this.health+=10;
       this.temperature-=random.nextInt(0,2);
     }
-
+//the method train, decreases energy and health, increases xp, decreases mood, and increases temperature slightly
     @Override
     public void train() {
         this.energy-=15;
@@ -62,7 +67,7 @@ public class charizard implements  Pokemon {
       this.mood-=5;
       this.temperature+=random.nextInt(0,4);
     }
-
+//the method play, decreases energy, increases health and mood, and decreases temperature slightly
     @Override
     public void play() {
 this.energy-=10;
@@ -70,7 +75,7 @@ this.health+=5;
 this.mood+=15;
 this.temperature-=random.nextInt(0,3);
     }
-
+//the method feed, increases energy, health, mood, and increases temperature slightly
     @Override
     public void feed() {
         this.energy+=20;
@@ -78,7 +83,7 @@ this.temperature-=random.nextInt(0,3);
       this.mood+=10;
       this.temperature+=random.nextInt(0,2);
     }
-
+//the method battle, decreases energy and health, increases xp, decreases mood, and increases temperature slightly
     @Override
     public void battle() {
         this.energy-=random.nextInt(15,45);
@@ -87,7 +92,7 @@ this.temperature-=random.nextInt(0,3);
       this.mood-=10;
       this.temperature+=random.nextInt(0,5);
     }
-
+//the method lvlup, increases level if xp is greater than or equal to 100, increases health, energy, and mood, and decreases xp by 100
     @Override
     public void lvlup() {
         if(this.xp>=100){
@@ -98,7 +103,7 @@ this.temperature-=random.nextInt(0,3);
             this.mood+=10;
         }
     }
-
+//the method fire, decreases energy and health, increases temperature significantly, and increases mood, need to change the name
     @Override
     public void fire(){
         this.energy-=20;
