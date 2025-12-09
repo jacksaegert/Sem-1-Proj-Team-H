@@ -15,13 +15,13 @@ public class charizard implements  Pokemon {
    @SuppressWarnings("FieldMayBeFinal")
    private double xp;
 
-    public charizard(int Health, int Energy, int Level, int Temperature,int Mood, double Xp) {
-        this.health = Health;
-        this.energy = Energy;
-        this.level = Level;
-        this.temperature = Temperature;
-        this.mood=Mood;
-         this.xp = Xp;
+    public charizard() {
+        this.health = 100;
+        this.energy = 100;
+        this.level = 1;
+        this.temperature = 38;
+        this.mood=100;
+         this.xp = 0;
     }
     
     public double getXp() {
@@ -106,6 +106,8 @@ this.temperature-=random.nextInt(0,3);
         this.temperature+=random.nextInt(5,15);
         this.mood+=10;
     }
+
+    //things for jack
     public void displaystats() {
         System.out.println("Charizard's Stats:" +"Health: " + this.health + ", Energy: " + this.energy + ", Level: " + this.level + ", Temperature: " + this.temperature + "°C" + ", Mood: " + this.mood + ", Experience: " + this.xp);
      

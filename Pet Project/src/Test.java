@@ -4,7 +4,7 @@ public class Test {
 
 
         System.out.println("Hello, World!");
-                charizard charizard = new charizard( 100, 100, 1, 38, 100,0);
+                charizard charizard = new charizard();
         System.out.println("Charizard created with health: " + charizard.getHealth() + ", energy: " + charizard.getEnergy() + ", level: " + charizard.getLevel() + ", temperature: " + charizard.getTemperature() + "°C" + ", experience: " + charizard.getXp());
         charizard.train();
         System.out.println("After training, Charizard has health: " + charizard.getHealth() + ", energy: " + charizard.getEnergy() + ", level: " + charizard.getLevel() + ", temperature: " + charizard.getTemperature() + "°C" + ", experience: " + charizard.getXp());
