@@ -1,13 +1,12 @@
-public class ninetails implements Pokemon{
+public class Ninetails implements Pokemon{
     private String name;
-    private int level;
-    double xp = 0;
-    int energy = 0;
-    int health = 0;
-    int mood = 0;
-    public ninetails(n)
+    private int level = 0;
+    private double xp = 0;
+    private int energy = 50;
+    private int health = 50;
+    private int mood = 50;
+    public Ninetails(n)
     {
-        mood = 50;
         name = n;
     }
     public void sleep()
@@ -40,4 +39,54 @@ public class ninetails implements Pokemon{
     {
         level += 1;
     }
+    public String getName()
+    {
+<<<<<<< Updated upstream
+        return name;
+    }
+    public int getLevel()
+    {
+        return level;
+    }
+    public int getXP()
+    {
+        return xp;
+    }
+    public int getEnergy()
+    {
+        return energy;
+    }
+    public int getHealth()
+    {
+        return health;
+    }
+    public int getMood()
+    {
+        return mood;
+=======
+        return name
+    }
+    public int getLevel()
+    {
+        return level
+    }
+    public int getXP()
+    {
+        return xp
+    }
+    public int getEnergy()
+    {
+        return energy
+    }
+    public int getHealth()
+    {
+        return health
+    }
+    public int getMood()
+    {
+        return mood
+>>>>>>> Stashed changes
+    }
+
+    
 }
