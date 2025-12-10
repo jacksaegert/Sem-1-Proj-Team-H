@@ -98,9 +98,6 @@ public class Ditto implements Pokemon {
               this.mood+=10;
           }
       }
-      @Override
-      public void fire() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'fire'");
-      }
+      
+      
 }

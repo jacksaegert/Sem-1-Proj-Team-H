@@ -8,5 +8,6 @@ interface Pokemon {
     public void feed();
     public void battle();
     public void lvlup();
-    public void fire();
+    void fire();
+   
 }
