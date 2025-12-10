@@ -1,11 +1,11 @@
 interface Pokemon {
     //Blorp
-    int level = 0;
-    double xp = 0;
-    int energy = 0;
-    int health = 0;
-    int mood = 0;
-
+    public double getXp();
+    public int getHealth();
+    public int getEnergy();
+    public int getLevel();
+    public int getTemperature();
+    public int getMood();
     public void sleep();
     public void train();
     public void play();
