@@ -1,18 +1,5 @@
-public class Ditto implements Pokemon{
-    
-    private int energy;
-    private int level;
-    private int mood;
-    private int xp;
-    private int health;
-    public Ditto() {
-        this.energy = 100;
-        this.health = 100;
-        this.level = 1;
-        this.mood = 100;
-        this.xp = 0;
-
-    }
+public class Ditto implements Pokemon {
+    public Ditto(){
         public void sleep(){
             this.energy += 20;
             this.mood += 5;
@@ -31,6 +18,5 @@ public class Ditto implements Pokemon{
         public void battle(){
 
         }
-        //Write Getter and Setter methods
-        write
+    }
 }
