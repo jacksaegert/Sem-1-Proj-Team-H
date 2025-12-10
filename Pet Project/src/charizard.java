@@ -188,4 +188,8 @@ this.temperature-=random.nextInt(0,3);
        
         }
     }
+    public Object displayStats() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'displayStats'");
+    }
 }

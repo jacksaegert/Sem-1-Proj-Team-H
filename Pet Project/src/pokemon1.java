@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 public class pokemon1 {
+    
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
@@ -30,7 +31,7 @@ Charizard pokemon1= null;
         //Event loop WHILE pokemon is alive
         while (pokemon1.getHealth() > 0 && pokemon1.getEnergy() > 0 && pokemon1.getMood() > 0){
             System.out.println("What do you want to do with your Pokemon?");
-            System.out.println("\n1.) Sleep \n2.) Feed\n 3.) Play\n4.) Train\n5.) Battle");
+            System.out.println("\n1.) Sleep \n2.) Feed\n 3.) Play\n4.) Train\n5.) Batttle \n 6. display stats" );
             choice = input.nextInt();
             //Primanry choice loop
             switch (choice) {
@@ -39,6 +40,8 @@ Charizard pokemon1= null;
                 case 3 -> pokemon1.play();
                 case 4 -> pokemon1.train();
                 default -> pokemon1.battle();
+                case 6 -> pokemon1.displayStats();
+                
             }
             //Random Loop
             rand = random.nextInt(0,11);
