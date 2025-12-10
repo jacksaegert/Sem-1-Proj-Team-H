@@ -40,7 +40,7 @@ Charizard pokemon1= null;
                 case 3 -> pokemon1.play();
                 case 4 -> pokemon1.train();
                 default -> pokemon1.battle();
-                case 6 -> pokemon1.displayStats();
+                case 6 -> pokemon1.displaystats();
                 
             }
             //Random Loop
