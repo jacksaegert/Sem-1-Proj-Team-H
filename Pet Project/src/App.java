@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.Random;
 public class pokemon1 {
@@ -14,13 +15,12 @@ public class pokemon1 {
         System.out.println("Choose your Pokemon:");
         System.out.println("\n 1.) Charizard: Manage temperature! \n 2.) Bellsprout: Manage sunlight! \n 3.) Ninetails: Make sure they're well goroomed! \n 4.) Ditto: Swaps to a random pokemon occasionally. Manage everything! \n");
         int choice = input.nextInt();
-
-Charizard pokemon1= null;
+        starterChoice(choice);
 
         //Selector
-        if (choice == 1){
-             pokemon1 = new Charizard();
-        } //else if (choice == 2) {
+        //if (choice == 1){
+            // pokemon1 = new Charizard();
+       // } else if (choice == 2) {
             //bellsprout pokemon = new bellsprout();
       //  } //else if (choice == 3) {
           //  ninetails pokemon = new ninetails();
@@ -54,6 +54,20 @@ Charizard pokemon1= null;
             }
 
         }
+
+
+
+    public static void starterChoice(int choice){
+        if (choice == 1){
+            pokemon1 = new Charizard();
+       } //else if (choice == 2) {
+           //bellsprout pokemon = new bellsprout();
+     //  } //else if (choice == 3) {
+         //  ninetails pokemon = new ninetails();
+      // } //else {
+         //  Ditto pokemon = new Ditto();
+     //  }
+    }
 
 
 

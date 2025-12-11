@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Charizard implements  Pokemon {
+public class Charizard implements Pokemon {
     //initialize random
     Random random = new Random();
 
@@ -16,7 +16,7 @@ public class Charizard implements  Pokemon {
    @SuppressWarnings("FieldMayBeFinal")
    private double xp;
 //create constructor
-    public Charizard() {
+    public charizard() {
         this.health = 100;
         this.energy = 100;
         this.level = 1;
