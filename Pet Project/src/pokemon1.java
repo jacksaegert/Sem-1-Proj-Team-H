@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
-public class App {
+public class pokemon1 {
+    
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
@@ -13,29 +14,34 @@ public class App {
         System.out.println("Choose your Pokemon:");
         System.out.println("\n 1.) Charizard: Manage temperature! \n 2.) Bellsprout: Manage sunlight! \n 3.) Ninetails: Make sure they're well goroomed! \n 4.) Ditto: Swaps to a random pokemon occasionally. Manage everything! \n");
         int choice = input.nextInt();
+
+Charizard pokemon1= null;
+
         //Selector
         if (choice == 1){
-            charizard pokemon = new charizard();
-        } else if (choice == 2) {
-            bellsprout pokemon = new bellsprout();
-        } else if (choice == 3) {
-            ninetails pokemon = new ninetails();
-        } else {
-            ditto pokemon = new ditto();
-        }
+             pokemon1 = new Charizard();
+        } //else if (choice == 2) {
+            //bellsprout pokemon = new bellsprout();
+      //  } //else if (choice == 3) {
+          //  ninetails pokemon = new ninetails();
+       // } //else {
+          //  Ditto pokemon = new Ditto();
+      //  }
         int rand = 0;
         //Event loop WHILE pokemon is alive
-        while (Pokemon.getHealth() > 0 && Pokemon.getEnergy() > 0 && Pokemon.getMood() > 0){
+        while (pokemon1.getHealth() > 0 && pokemon1.getEnergy() > 0 && pokemon1.getMood() > 0){
             System.out.println("What do you want to do with your Pokemon?");
-            System.out.println("\n1.) Sleep \n2.) Feed\n 3.) Play\n4.) Train\n5.) Battle");
+            System.out.println("\n1.) Sleep \n2.) Feed\n 3.) Play\n4.) Train\n5.) Batttle \n 6. display stats" );
             choice = input.nextInt();
             //Primanry choice loop
             switch (choice) {
-                case 1 -> pokemon.sleep();
-                case 2 -> pokemon.feed();
-                case 3 -> pokemon.play();
-                case 4 -> pokemon.train();
-                default -> pokemon.battle();
+                case 1 -> pokemon1.sleep();
+                case 2 -> pokemon1.feed();
+                case 3 -> pokemon1.play();
+                case 4 -> pokemon1.train();
+                default -> pokemon1.battle();
+                case 6 -> pokemon1.displaystats();
+                
             }
             //Random Loop
             rand = random.nextInt(0,11);
