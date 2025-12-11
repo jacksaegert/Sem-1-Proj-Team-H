@@ -100,4 +100,6 @@ public class Ditto implements Pokemon {
       }
       
       
+      
+      
 }

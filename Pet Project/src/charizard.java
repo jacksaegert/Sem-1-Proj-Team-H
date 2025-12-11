@@ -104,7 +104,7 @@ this.temperature-=random.nextInt(0,3);
         }
     }
 //the method fire, decreases energy and health, increases temperature significantly, and increases mood, need to change the name
-    @Override
+    
     public void fire(){
         this.energy-=20;
         this.health-=10;
@@ -115,8 +115,28 @@ this.temperature-=random.nextInt(0,3);
     //things for jack
     public void displaystats() {
         System.out.println("Charizard's Stats:" +"Health: " + this.health + ", Energy: " + this.energy + ", Level: " + this.level + ", Temperature: " + this.temperature + "°C" + ", Mood: " + this.mood + ", Experience: " + this.xp);
-     
     }
+        public void checkstats() {
+        checkHealth();
+        checkEnergy();
+        checkMood();
+        checkTemperature();
+        checkXp();
+    }
+    public void checkXp() {
+        if(this.xp>100){
+            this.xp=100;
+            if(this.xp>=100){
+                this.level+=1;
+                this.xp= this.xp - 100;
+                this.health+=20;
+                this.energy+=20;
+                this.mood+=10;
+                System.out.println("Charizard has leveled up to level " + this.level + "! Stats have increased.");
+            }
+        }
+    }
+
     public void checkTemperature() {
         if(this.temperature>100){
             this.temperature=100;

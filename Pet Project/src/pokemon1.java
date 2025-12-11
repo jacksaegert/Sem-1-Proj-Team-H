@@ -17,6 +17,7 @@ public class pokemon1 {
 
 Charizard pokemon1= null;
 
+
         //Selector
         if (choice == 1){
              pokemon1 = new Charizard();
@@ -24,9 +25,10 @@ Charizard pokemon1= null;
             //bellsprout pokemon = new bellsprout();
       //  } //else if (choice == 3) {
           //  ninetails pokemon = new ninetails();
-       // } //else {
-          //  Ditto pokemon = new Ditto();
-      //  }
+       //  } 
+       //  else {
+           // pokemon1 = new Ditto();
+       // }
         int rand = 0;
         //Event loop WHILE pokemon is alive
         while (pokemon1.getHealth() > 0 && pokemon1.getEnergy() > 0 && pokemon1.getMood() > 0){
@@ -52,7 +54,7 @@ Charizard pokemon1= null;
                 case 5 -> System.out.println("Your pokemon finds a wild berry and eats it! Thankfully, it wasn't poisonous");
                 case 6 -> System.out.println("Your pokemon finds a wild berry and eats it! It's poisonous!");
             }
-
+            pokemon1.checkstats();
         }
 
 
