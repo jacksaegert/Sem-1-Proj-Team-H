@@ -31,11 +31,13 @@ Charizard pokemon1= null;
        // }
         int rand = 0;
         //Event loop WHILE pokemon is alive
+        
         while (pokemon1.getHealth() > 0 && pokemon1.getEnergy() > 0 && pokemon1.getMood() > 0){
             System.out.println("What do you want to do with your Pokemon?");
             System.out.println("\n1.) Sleep \n2.) Feed\n 3.) Play\n4.) Train\n5.) Batttle \n 6. display stats" );
             choice = input.nextInt();
             //Primanry choice loop
+            
             switch (choice) {
                 case 1 -> pokemon1.sleep();
                 case 2 -> pokemon1.feed();
@@ -45,6 +47,7 @@ Charizard pokemon1= null;
                 case 6 -> pokemon1.displaystats();
                 
             }
+            
             //Random Loop
             rand = random.nextInt(0,11);
             switch (rand){
@@ -54,7 +57,7 @@ Charizard pokemon1= null;
                 case 5 -> System.out.println("Your pokemon finds a wild berry and eats it! Thankfully, it wasn't poisonous");
                 case 6 -> System.out.println("Your pokemon finds a wild berry and eats it! It's poisonous!");
             }
-            pokemon1.checkstats();
+            
         }
 
 

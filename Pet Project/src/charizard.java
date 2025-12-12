@@ -117,11 +117,19 @@ this.temperature-=random.nextInt(0,3);
         System.out.println("Charizard's Stats:" +"Health: " + this.health + ", Energy: " + this.energy + ", Level: " + this.level + ", Temperature: " + this.temperature + "°C" + ", Mood: " + this.mood + ", Experience: " + this.xp);
     }
         public void checkstats() {
-        checkHealth();
-        checkEnergy();
-        checkMood();
-        checkTemperature();
         checkXp();
+        if(this.energy>100){
+            this.energy=100;
+        }
+        if(this.health>100){
+            this.health=100;
+        }
+        if(this.mood>100){
+            this.mood=100;
+        }if(this.temperature>100){
+            this.temperature=100;
+        }
+        
     }
     public void checkXp() {
         if(this.xp>100){
@@ -153,8 +161,11 @@ this.temperature-=random.nextInt(0,3);
         }
         if(this.temperature>100){
             this.temperature=100;
+            if (this.mood>100) {
+                this.mood=100;
         }
     }
+}
 }
         public void checkHealth() {
             if(this.health>100){
@@ -205,8 +216,11 @@ this.temperature-=random.nextInt(0,3);
             System.out.println("Charizard's energy is at maximum capacity! Energy: " + this.energy + " and has gained a health boost.");
             this.health+=5;
         }
+        if(this.energy>100){
+            this.energy=100;
        
         }
     }
    
+    }
 }
