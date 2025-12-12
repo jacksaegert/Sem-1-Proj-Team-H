@@ -85,7 +85,7 @@ public class Bellsprout implements Pokemon {
     }
     
     // Updated battle method
-    public void die (double amount) {
+    public void sleep (double amount) {
     if (energy <= 0) {
         System.out.println(name + " has no energy left and has passed away...");
         System.out.println("Game Over for " + name + ".");
