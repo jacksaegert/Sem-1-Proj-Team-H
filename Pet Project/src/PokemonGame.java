@@ -1,10 +1,11 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class PokemonGame {
 
     // A single global Pokémon instance the user controls
     private static Pokemon pokemon;
+    static boolean isDitto = false;
 
     public static void main(String[] args) {
 
@@ -82,27 +83,43 @@ public class PokemonGame {
                     pokemon.modifyHealth(-8);
                     pokemon.modifyEnergy(-5);
                 }
-                case 8 -> {
-                    if (pokemon instanceof Ditto) {
-                        System.out.println("\nDitto transforms into another Pokémon!");
-                        randomTransform();
-                    }
-                }
                 default -> {} // nothing happens
+            }
+            if (isDitto == true) {
+                rand = random.nextInt(0,20);
+                if (rand == 1){
+                System.out.println("\nDitto transforms into another Pokémon!");
+                randomTransform();
+                }
+                
             }
         }
 
         System.out.println("\nGAME OVER!");
         System.out.println("Your Pokémon has fainted...");
     }
+        // Ditto special ability
+        public static void randomTransform() {
+            Random random = new Random();
+            int r = random.nextInt(1, 4);
+    
+            switch (r) {
+                case 1 -> pokemon = new Charizard();
+                case 2 -> pokemon = new Bellsprout();
+                case 3 -> pokemon = new Ninetails();
+            }
+    
+            System.out.println("Ditto transformed into: " + pokemon.getName());
+        }
 
     // Creates starter Pokémon
     public static void starterChoice(int choice) {
         switch (choice) {
             case 1 -> pokemon = new Charizard();
             case 2 -> pokemon = new Bellsprout();
-            case 3 -> pokemon = new Ninetales();
-            case 4 -> pokemon = new Ditto();
+            case 3 -> pokemon = new Ninetails();
+            case 4 ->{ pokemon = new Ditto();
+                isDitto = true;}
             default -> {
                 System.out.println("Invalid choice, defaulting to Charizard.");
                 pokemon = new Charizard();
@@ -110,17 +127,5 @@ public class PokemonGame {
         }
     }
 
-    // Ditto special ability
-    public static void randomTransform() {
-        Random random = new Random();
-        int r = random.nextInt(1, 4);
 
-        switch (r) {
-            case 1 -> pokemon = new Charizard();
-            case 2 -> pokemon = new Bellsprout();
-            case 3 -> pokemon = new Ninetales();
-        }
-
-        System.out.println("Ditto transformed into: " + pokemon.getName());
-    }
 }

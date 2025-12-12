@@ -31,5 +31,14 @@ public abstract class Pokemon {
     public void play() {mood += 20; energy -= 5;}
     public void train() {xp += 15; energy -= 10;}
     public void battle() {xp += 30; health -= random.nextInt(5,26); energy -= random.nextInt(5,26); mood -= random.nextInt(5,26);}
-    public void displayStats() { /* ... */ }
+    public void displayStats() {
+        System.out.println("\n=== " + name + " Stats ===");
+        System.out.println("Health: " + health);
+        System.out.println("Energy: " + energy);
+        System.out.println("Mood: " + mood);
+        System.out.println("XP: " + xp);
+        System.out.println("=======================\n");
+    }
+    
+
 }
