@@ -16,7 +16,7 @@ public class Bellsprout extends Pokemon {
     @Override
     public void train() {
         super.train();   // XP gain and energy cost
-        sun += 1;     // Gets a little stronger
+        sun += 2;     // Gets a little stronger
         System.out.println(name + " Got some sun! Sunlight is now " + sun + ".");
     }
 
@@ -25,7 +25,6 @@ public class Bellsprout extends Pokemon {
     public void feed() {
         super.feed();    // Health boost
         hydration += 2;
-        sun += 1;
         System.out.println(name + " drank deeply! Hydration: " + hydration);
     }
 
@@ -34,6 +33,7 @@ public class Bellsprout extends Pokemon {
     public void sleep() {
         super.sleep();
         System.out.println(name + " curls its leaves and rests peacefully.");
+        this.sun -= 2;
     }
     @Override
     public void displayStats(){
