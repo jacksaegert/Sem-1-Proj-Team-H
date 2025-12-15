@@ -11,9 +11,9 @@ public abstract class Pokemon {
 
     public Pokemon(String name, int h, int e, int m, int xp) {
         this.name = name;
-        health = h;
-        energy = e;
-        mood = m;
+        this.health = h;
+        this.energy = e;
+        this.mood = m;
         this.xp = xp;
     }
 
@@ -39,6 +39,25 @@ public abstract class Pokemon {
         System.out.println("XP: " + xp);
         System.out.println("=======================\n");
     }
+
+    // Simulates passage of time
+    public void tick() {
+        this.energy -= 5;
+        this.mood -= 5;
+        this.health -= 5;
+    }
+
+    public void options(int choice) {
+        switch (choice) {
+            case 1 -> this.sleep();
+            case 2 -> this.feed();
+            case 3 -> this.play();
+            case 4 -> this.train();
+            case 5 -> this.battle();
+            case 6 -> this.displayStats();
+            default -> System.out.println("Invalid choice.");
+    }
+}
     
 
 }

@@ -11,21 +11,22 @@ public class Ninetails extends Pokemon {
     @Override
     public void train() {
         super.train();
-        fluff += 1;  // exercise keeps the coat healthy
-        System.out.println(name + " practices gracefully. Fluff +1.");
+        this.fluff -= 2;  
+        System.out.println(name + " practices gracefully. Fluff -2.");
     }
 
     @Override
     public void play() {
         super.play();
-        System.out.println(name + " trots around happily, tails swishing.");
+        System.out.println(name + " trots around happily, tails swishing. Fluffiness -1");
+        this.fluff -= 1;
     }
 
     @Override
     public void feed() {
         super.feed();
-        fluff += 1;  // good diet = shinier fur
-        System.out.println(name + " enjoys a snack and looks fluffier.");
+        this.fluff += 1;  // good diet = shinier fur
+        System.out.println(name + " enjoys a snack and looks fluffier. Fluff +1");
     }
 
     @Override
@@ -37,12 +38,25 @@ public class Ninetails extends Pokemon {
     @Override
     public void battle() {
         super.battle();
-        System.out.println(name + " maintains elegant poise, even in battle.");
+        System.out.println(name + " maintains elegant poise, even in battle. Fluff -3");
+        this.fluff -= 3;
     }
 
-    public void checkStats() {
+    @Override
+    public void displayStats() {
         super.displayStats();
         System.out.println("Fluffiness: " + fluff);
         System.out.println("=======================\n");
+    }
+
+    public void groom() {
+        System.out.println("You give Ninetails a little rub! Fluff +7");
+        this.fluff += 7;
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        fluff -= 1;
     }
 }
