@@ -59,4 +59,31 @@ public class Ninetails extends Pokemon {
         super.tick();
         fluff -= 1;
     }
+    @Override
+    public void displayOptions() {
+        System.out.println("\nWhat do you want to do?");
+        System.out.println("""
+                    1.) Sleep
+                    2.) Feed
+                    3.) Play
+                    4.) Train
+                    5.) Battle
+                    6.) Display Stats
+                    7.) Groom
+                    """);
+    }
+    @Override
+    public void options(int choice) {
+        switch (choice) {
+            case 1 -> this.sleep();
+            case 2 -> this.feed();
+            case 3 -> this.play();
+            case 4 -> this.train();
+            case 5 -> this.battle();
+            case 6 -> this.displayStats();
+            case 7 -> this.groom();
+            default -> System.out.println("Invalid choice.");
+    }
+    }
+        
 }
