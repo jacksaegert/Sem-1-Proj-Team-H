@@ -66,7 +66,6 @@ public abstract class Pokemon {
                     4.) Train
                     5.) Battle
                     6.) Display Stats
-                    7.) Quit
                     """);
         }
 }
