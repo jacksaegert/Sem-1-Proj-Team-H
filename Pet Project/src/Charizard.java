@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Charizard extends Pokemon {
     Random random = new Random();
     private int temperature;
@@ -20,6 +21,7 @@ public class Charizard extends Pokemon {
         super.sleep();
         System.out.println("Charizard snoozes peacefully");
         this.temperature -= 3;
+    }
 
     @Override
     public void tick() {
@@ -31,6 +33,13 @@ public class Charizard extends Pokemon {
         super.displayOptions();
         System.out.println("Pokemon-Specific actions:");
         System.out.println("7.) Ignite");
+    }
+    @Override
+    public void displayStats() {
+        super.displayStats();
+        System.out.println("Charizard Specific Stats:");
+        System.out.println("Temperature: " + this.temperature);
+        System.out.println("=======================");
     }
     @Override
     public void options(int choice) {
@@ -48,4 +57,5 @@ public class Charizard extends Pokemon {
     public void ignite() {
         int rand = random.nextInt(5, 11);
         this.temperature += rand;
+}
 }
