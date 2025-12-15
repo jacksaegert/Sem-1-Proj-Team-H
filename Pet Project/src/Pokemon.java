@@ -57,6 +57,18 @@ public abstract class Pokemon {
             case 6 -> this.displayStats();
             default -> System.out.println("Invalid choice.");
     }
+        public void displayOptions() {
+            System.out.println("\nWhat do you want to do?");
+            System.out.println("""
+                    1.) Sleep
+                    2.) Feed
+                    3.) Play
+                    4.) Train
+                    5.) Battle
+                    6.) Display Stats
+                    7.) Quit
+                    """);
+        }
 }
     
 
