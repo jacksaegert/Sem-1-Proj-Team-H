@@ -35,20 +35,9 @@ public class PokemonGame {
         while (pokemon.getHealth() > 0 &&
                pokemon.getEnergy() > 0 &&
                pokemon.getMood() > 0) {
-
-            System.out.println("\nWhat do you want to do?");
-            System.out.println("""
-                    1.) Sleep
-                    2.) Feed
-                    3.) Play
-                    4.) Train
-                    5.) Battle
-                    6.) Display Stats
-                    7.) Quit
-                    """);
-
+            
+            pokemon.displayOptions();
             choice = input.nextInt();
-
             // Method for choices
             pokemon.options(choice);
 
@@ -120,6 +109,6 @@ public class PokemonGame {
             case 3 -> pokemon = new Ninetails();
         }
 
-        System.out.println("Ditto transformed into: " + pokemon.getName());
+        System.out.println("Ditto transformed into: " + pokemon.getName() + " Stats reset!");
     }
 }
