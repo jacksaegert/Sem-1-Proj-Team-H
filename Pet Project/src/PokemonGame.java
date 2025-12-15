@@ -79,7 +79,9 @@ public class PokemonGame {
 
         // Game over (after loop)
         System.out.println("\nGAME OVER!");
-        System.out.println("Your Pokémon has fainted...");
+        System.out.println("Your Pokémon has fainted!");
+        System.out.println("Your ending stats...");
+        pokemon.displayStats();
     }
 
     // Creates starter Pokémon
