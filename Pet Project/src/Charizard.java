@@ -1,5 +1,5 @@
 public class Charizard extends Pokemon {
-
+    Random random = new Random();
     private int temperature;
 
     public Charizard() {
@@ -16,8 +16,36 @@ public class Charizard extends Pokemon {
     }
 
     @Override
+    public void sleep() {
+        super.sleep();
+        System.out.println("Charizard snoozes peacefully");
+        this.temperature -= 3;
+
+    @Override
     public void tick() {
         super.tick();
         this.temperature -= 2;
     }
+    @Override
+    public void displayOptions() {
+        super.displayOptions();
+        System.out.println("Pokemon-Specific actions:");
+        System.out.println("7.) Ignite");
+    }
+    @Override
+    public void options(int choice) {
+        switch (choice) {
+            case 1 -> this.sleep();
+            case 2 -> this.feed();
+            case 3 -> this.play();
+            case 4 -> this.train();
+            case 5 -> this.battle();
+            case 6 -> this.displayStats();
+            case 7 -> this.ignite();
+            default -> System.out.println("Invalid choice.");
+        }
+    }
+    public void ignite() {
+        int rand = random.nextInt(5, 11);
+        this.temperature += rand;
 }
