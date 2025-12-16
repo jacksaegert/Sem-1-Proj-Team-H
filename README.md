@@ -23,7 +23,7 @@ Pokémon Life Simulator
 1. Author Information
 Program Lead: Jack Saegert
 QA tester: Max Gershwin
-Project Lead (who did not do any work basically): Aiden Morriss
+Project Lead: Aiden Morriss
 Technical Writer(who created the project description and class diagram): Ruby Aguilera
 Co-author, and main writer of this readme as max(the one writing this) is dealing with a bit of migraine at the time: CHATGPT and Co-Pilot, special thanks to these two for saving the readme file.
 
