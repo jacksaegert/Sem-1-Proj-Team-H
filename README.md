@@ -1,3 +1,3 @@
 This project is a Java Pokémon simulation that allows you to pick a pokemon that uses object-oriented programming concepts from AP Computer Science A. The program is built around an abstract "Pokemon" class that stores shared variables like health, energy, mood, and XP, along with common actions such as training, feeding, sleeping, and battling. Different Pokémon classes ("Charizard", "Bellsprout", "Ninetails", and "Ditto") extend the `Pokemon` class and override methods to add unique behaviors and attributes. This project uses object-oriented programming principles to make creating different Pokémon more efficient. 
 
-https://drive.google.com/file/d/1NywpFuDTvq75MsVesDtYFz9S3bdqh-I_/view?usp=classroom_web&authuser=0
+![Pokemon AP CSA Final Project drawio](https://github.com/user-attachments/assets/54489688-4f5b-457f-add9-07c922472233)
